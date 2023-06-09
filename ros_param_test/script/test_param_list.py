@@ -11,7 +11,7 @@ if __name__ == '__main__':
     rospy.init_node('test_param_list', anonymous=True)
 
     # Get parameters
-    input_topic = rospy.get_param("~input_topics", "/camera1/color/image_raw, /camera2/color/image_raw")
+    input_topic = rospy.get_param("~input_topics", "[/camera1/color/image_raw, /camera2/color/image_raw]")
     print('input_topic:',input_topic)
 
     # split the input_topic yaml format
