@@ -1,0 +1,8 @@
+<launch>
+    <arg name="input_topics" default="[/lidar1_points, /lidar2_points]" />
+
+  
+    <node pkg="sensor_fusion" type="test_param_list.py" name="test_param_list" output="screen">
+      <param name="input_topics" value="$(arg input_topics)" />
+    </node>
+  </launch>
